@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FF3366">
+    <title>hướngdẫn Mod</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            margin: 0;
+            background-color: #f3f3f3;
+        }
+        .video-container, .video-container2 {
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center; 
+        }
+        .video-container {
+            background-image: url('https://firebasestorage.googleapis.com/v0/b/nhachay-43b11.appspot.com/o/cr17ued280o81.gif?alt=media&token=c80ef468-d801-4f5f-aa28-2937efcdc9b1');
+        }
+        .video-container2 {
+            background-image: url('https://firebasestorage.googleapis.com/v0/b/nhachay-43b11.appspot.com/o/7h3tvfsml3oa1.gif?alt=media&token=60357fa7-f6ba-4d23-af37-6e610ffc0742');
+        }
+        h1 {
+            font-size: 30px;
+            color: lime;
+            text-shadow: -2px -2px 0 red,  2px -2px 0 red, -2px  2px 0 red, 2px  2px 0 red;
+            font-weight: bold;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR91VUIoNmtCG4RpuBc3Ic5osq6hK7lTkFxUKjsypfhTymhB0GQY5gnRI&s');
+            margin-bottom: 20px;
+        }
+        video {
+            width: 90%;
+            height: 80%;
+            border-radius: 8px;
+        }
+        .toggleButton {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 20px;
+            color: blue;
+            font-weight: bold;
+            background-color: orange;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="video-section">
+        <div class="video-container">
+            <h1>Cách Lấy Key Vào Web</h1>
+            <video controls>
+                <source src="https://firebasestorage.googleapis.com/v0/b/nhachay-43b11.appspot.com/o/YouCut_20240911_170311224.mp4?alt=media&token=e18cdfe7-465e-4286-978d-78ad6bc59862" type="video/mp4">
+            </video>
+            <button class="toggleButton">ẨN Video</button>
+        </div>
+        <div class="video-container2">
+            <h1>Cách Mod Video Sảnh Nền</h1>
+            <video controls>
+                <source src="https://firebasestorage.googleapis.com/v0/b/nhachay-43b11.appspot.com/o/VIDEO_DOWNLOAD_1725510058147_1725903964242.mp4?alt=media&token=28aeaa97-af9b-4696-939d-725e26e52b81" type="video/mp4">
+            </video>
+            <button class="toggleButton">ẨN Video</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toggleButton').forEach(button => {
+            button.addEventListener('click', () => {
+                const video = button.previousElementSibling;
+                if (video.style.visibility === 'hidden') {
+                    video.style.visibility = 'visible';
+                    video.style.height = '80%';
+                    button.textContent = 'ẨN Video';
+                } else {
+                    video.style.visibility = 'hidden';
+                    video.style.height = 'auto';
+                    button.textContent = 'HIỆN Video';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
